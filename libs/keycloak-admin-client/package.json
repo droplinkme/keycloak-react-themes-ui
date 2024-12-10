@@ -1,0 +1,58 @@
+{
+  "name": "@droplink/keycloak-admin-client",
+  "version": "999.0.0-SNAPSHOT",
+  "description": "A client to interact with Keycloak's Administration API",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "lib"
+  ],
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "wireit",
+    "lint": "wireit",
+    "test": "wireit",
+    "prepublishOnly": "pnpm build"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc --pretty",
+      "files": [
+        "src/**",
+        "package.json",
+        "tsconfig.json"
+      ],
+      "output": [
+        "lib/**"
+      ]
+    },
+    "lint": {
+      "command": "eslint ."
+    },
+    "test": {
+      "command": "TS_NODE_PROJECT=tsconfig.test.json mocha --recursive \"test/**/*.spec.ts\" --timeout 10000"
+    }
+  },
+  "dependencies": {
+    "camelize-ts": "^3.0.0",
+    "url-join": "^5.0.0",
+    "url-template": "^3.1.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "@types/chai": "^5.0.1",
+    "@types/lodash-es": "^4.17.12",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^22.9.0",
+    "chai": "^5.1.2",
+    "lodash-es": "^4.17.21",
+    "mocha": "^11.0.0",
+    "ts-node": "^10.9.2"
+  }
+}

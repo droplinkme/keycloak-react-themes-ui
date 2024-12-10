@@ -1,0 +1,14 @@
+{
+  "packages": ["apps/**/*", "libs/**/*"],
+  "workspaces": {
+    "packages": ["apps/**/*", "libs/**/*"]
+  },
+  "version": "independent",
+  "npmClient": "pnpm",
+  "useNx": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    }
+  }
+}
