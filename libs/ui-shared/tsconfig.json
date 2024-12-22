@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "typeRoots": ["../../node_modules/@types", "@types"]
+  },
+  "include": ["src", "@types/keycloak.d.ts"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx"]
+}

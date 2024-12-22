@@ -1,0 +1,23 @@
+{
+  "name": "@droplink.softwares/ui",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Allan Christian Vieira",
+    "email": "allancnfx.vieira@gmail.com",
+    "url": "https://github.com/orgs/droplinkme"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "libs/**/*",
+      "apps/**/*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^8.1.9",
+    "nx": "^20.1.0",
+    "typescript": "^5.6.3",
+    "wireit": "^0.14.9"
+  }
+}
